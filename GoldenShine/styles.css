@@ -1,4 +1,4 @@
- /* Basic Reset and Styling */
+/* Basic Reset and Styling */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -68,32 +68,34 @@ footer {
   width: 300px;
   height: 200px;
   padding: 20px;
-  background: white;
+  background: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
   position: relative;
-  overflow: hidden;
-  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
-  cursor: pointer;
+  color: white; /* Ensure text remains visible */
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.service-box:hover {
-  background: #f0f0f0;
-  transform: scale(1.05);
-}
-
-/* Service Titles */
 .service-box h3 {
+  z-index: 2;
   font-size: 18px;
-  margin-bottom: 10px;
+}
+
+/* Image Section Below Service Box */
+.service-image {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
 }
 
 /* Service List */
 .service-box ul {
   list-style: none;
   padding: 0;
-  transition: opacity 0.3s ease-in-out;
 }
 
 .service-box ul li {
@@ -101,120 +103,81 @@ footer {
   font-size: 16px;
 }
 
-/* Hover Image Effect - Image appears inside the box */
-.service-box img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+/* Service Images Below */
+.general-cleaning .service-image {
+  content: url('images/image1.jpeg');
 }
 
-.service-box:hover img {
-  opacity: 1;
+.special-cleaning .service-image {
+  content: url('images/image2.jpeg');
 }
 
-/* Contact Page Styling */
-.contact-container {
-  max-width: 600px;
-  margin: auto;
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  text-align: left;
+.fumigation .service-image {
+  content: url('images/image3.jpeg');
 }
 
-.contact-container label {
-  font-weight: bold;
-  display: block;
-  margin-top: 10px;
+.outdoor-cleaning .service-image {
+  content: url('images/image4.jpeg');
 }
 
-.contact-container input,
-.contact-container textarea {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+.office-cleaning .service-image {
+  content: url('images/image5.jpeg');
 }
 
-.contact-container button {
-  background: #007BFF;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 10px;
+.carpet-cleaning .service-image {
+  content: url('images/image6.jpeg');
 }
 
-.contact-container button:hover {
-  background: #0056b3;
+.window-cleaning .service-image {
+  content: url('images/image7.jpeg');
 }
 
-/* About Page Styling */
-.about-container {
-  max-width: 800px;
-  margin: auto;
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  text-align: left;
+.floor-cleaning .service-image {
+  content: url('images/image8.jpeg');
 }
 
-.about-container h2 {
-  text-align: center;
+.move-in-cleaning .service-image {
+  content: url('images/image9.jpeg');
 }
 
-/* Portfolio Page */
-.portfolio-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+.move-out-cleaning .service-image {
+  content: url('images/image10.jpeg');
 }
 
-.portfolio-item {
-  width: 300px;
-  height: 200px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-  position: relative;
-  text-align: center;
+.restaurant-cleaning .service-image {
+  content: url('images/image11.jpeg');
 }
 
-.portfolio-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.event-cleaning .service-image {
+  content: url('images/image12.jpeg');
 }
 
-.portfolio-item:hover img {
-  opacity: 0.8;
+.industrial-cleaning .service-image {
+  content: url('images/image13.jpeg');
 }
 
-/* Responsive Adjustments */
+.exterior-cleaning .service-image {
+  content: url('images/image14.jpeg');
+}
+
+.deep-cleaning .service-image {
+  content: url('images/image15.jpeg');
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-  .services-container, .portfolio-container {
+  .services-container {
     flex-direction: column;
     align-items: center;
+  }
+
+  .service-box {
+    width: 90%;
   }
 }
 
 @media (max-width: 600px) {
   .service-box {
-    width: 90%;
-    height: auto;
-  }
-  .portfolio-item {
     width: 90%;
     height: auto;
   }
