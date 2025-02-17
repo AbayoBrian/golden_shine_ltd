@@ -40,6 +40,7 @@ section {
   border-radius: 5px;
 }
 
+/* Footer */
 footer {
   text-align: center;
   padding: 10px 0;
@@ -65,12 +66,15 @@ footer {
 
 .service-box {
   width: 300px;
+  height: 200px;
   padding: 20px;
   background: white;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  text-align: left;
-  transition: transform 0.3s ease, background 0.3s ease;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
   cursor: pointer;
 }
 
@@ -79,15 +83,17 @@ footer {
   transform: scale(1.05);
 }
 
+/* Service Titles */
 .service-box h3 {
-  text-align: center;
   font-size: 18px;
   margin-bottom: 10px;
 }
 
+/* Service List */
 .service-box ul {
   list-style: none;
   padding: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .service-box ul li {
@@ -95,73 +101,121 @@ footer {
   font-size: 16px;
 }
 
-/* 3D Carousel Container */
-.carousel-container {
-  perspective: 1000px;
-  margin: 40px auto;
-  width: 300px;
-  height: 300px;
-  position: relative;
-}
-
-/* 3D Carousel */
-.carousel {
+/* Hover Image Effect - Image appears inside the box */
+.service-box img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  position: absolute;
-  transform-style: preserve-3d;
-  animation: rotate 20s infinite linear;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
-.carousel figure {
+.service-box:hover img {
+  opacity: 1;
+}
+
+/* Contact Page Styling */
+.contact-container {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+
+.contact-container label {
+  font-weight: bold;
   display: block;
-  position: absolute;
-  width: 260px;
-  height: 160px;
-  left: 20px;
-  top: 70px;
-  margin: 0;
-  background: #fff;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  border-radius: 8px;
-  backface-visibility: hidden;
-  overflow: hidden;
+  margin-top: 10px;
 }
 
-.carousel figure:nth-child(1) { transform: rotateY(0deg) translateZ(400px); }
-.carousel figure:nth-child(2) { transform: rotateY(45deg) translateZ(400px); }
-.carousel figure:nth-child(3) { transform: rotateY(90deg) translateZ(400px); }
-.carousel figure:nth-child(4) { transform: rotateY(135deg) translateZ(400px); }
-.carousel figure:nth-child(5) { transform: rotateY(180deg) translateZ(400px); }
+.contact-container input,
+.contact-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
 
-.carousel img {
+.contact-container button {
+  background: #007BFF;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.contact-container button:hover {
+  background: #0056b3;
+}
+
+/* About Page Styling */
+.about-container {
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+
+.about-container h2 {
+  text-align: center;
+}
+
+/* Portfolio Page */
+.portfolio-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.portfolio-item {
+  width: 300px;
+  height: 200px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+
+.portfolio-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-/* Pause carousel animation on hover */
-.carousel:hover {
-  animation-play-state: paused;
+.portfolio-item:hover img {
+  opacity: 0.8;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-  .services-container {
+  .services-container, .portfolio-container {
     flex-direction: column;
     align-items: center;
   }
 }
 
 @media (max-width: 600px) {
-  .carousel-container {
-    width: 90%;
-    height: 250px;
-  }
-  .carousel figure {
+  .service-box {
     width: 90%;
     height: auto;
-    left: 5%;
-    top: 50px;
+  }
+  .portfolio-item {
+    width: 90%;
+    height: auto;
   }
 }
