@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Golden Shine Limited - Our Services</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -21,7 +21,7 @@
         <section id="services">
             <h2>Our Services</h2>
             <div class="services-container">
-                <div class="service-box" onmouseover="changeImage('images/image1.jpeg')">
+                <div class="service-box">
                     <h3>General Cleaning</h3>
                     <ul>
                         <li>Residential Cleaning</li>
@@ -31,7 +31,7 @@
                     </ul>
                 </div>
 
-                <div class="service-box" onmouseover="changeImage('images/image2.jpeg')">
+                <div class="service-box">
                     <h3>Specialized Cleaning</h3>
                     <ul>
                         <li>Post-Construction Cleaning</li>
@@ -41,7 +41,7 @@
                     </ul>
                 </div>
 
-                <div class="service-box" onmouseover="changeImage('images/image3.jpeg')">
+                <div class="service-box">
                     <h3>Fumigation & Pest Control</h3>
                     <ul>
                         <li>Fumigation Services</li>
@@ -52,7 +52,7 @@
                     </ul>
                 </div>
 
-                <div class="service-box" onmouseover="changeImage('images/image.jpeg')">
+                <div class="service-box">
                     <h3>Outdoor & Surface Cleaning</h3>
                     <ul>
                         <li>Tile Cleaning</li>
@@ -62,27 +62,18 @@
                     </ul>
                 </div>
             </div>
-            <img id="service-image" src="" alt="Service Image">
         </section>
     </main>
 
     <footer>
         <p>&copy; 2024 Cleaning Services. All rights reserved.</p>
         <p class="contact-info">
-            <img src="images/phone-icon.png" alt="Phone " class="footer-icon" />
+            <img src="images/phone-icon.png" alt="Phone" class="footer-icon" />
             <span>(+254) 718-292-217/702-115-328</span>
             &nbsp;&nbsp;
-            <img src="images/email-icon.png" alt="Email " class="footer-icon" />
+            <img src="images/email-icon.png" alt="Email" class="footer-icon" />
             <a href="mailto:osodo6724@gmail.com">osodo6724@gmail.com</a>
         </p>
     </footer>
-
-    <script>
-        function changeImage(imageSrc) {
-            let imageElement = document.getElementById("service-image");
-            imageElement.src = imageSrc;
-            imageElement.style.display = "block";
-        }
-    </script>
 </body>
 </html>
