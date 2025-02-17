@@ -8,7 +8,6 @@
 </head>
 <body>
     <header>
-        <!-- Company Logo -->
         <img src="images/logo.png" alt="Company Logo" class="logo" />
         <h1>Cleaning Services</h1>
         <nav>
@@ -22,7 +21,7 @@
         <section id="services">
             <h2>Our Services</h2>
             <div class="services-container">
-                <div class="service-box">
+                <div class="service-box" onmouseover="changeImage('images/image1.jpeg')">
                     <h3>General Cleaning</h3>
                     <ul>
                         <li>Residential Cleaning</li>
@@ -32,7 +31,7 @@
                     </ul>
                 </div>
 
-                <div class="service-box">
+                <div class="service-box" onmouseover="changeImage('images/image2.jpeg')">
                     <h3>Specialized Cleaning</h3>
                     <ul>
                         <li>Post-Construction Cleaning</li>
@@ -42,7 +41,7 @@
                     </ul>
                 </div>
 
-                <div class="service-box">
+                <div class="service-box" onmouseover="changeImage('images/image3.jpeg')">
                     <h3>Fumigation & Pest Control</h3>
                     <ul>
                         <li>Fumigation Services</li>
@@ -53,7 +52,7 @@
                     </ul>
                 </div>
 
-                <div class="service-box">
+                <div class="service-box" onmouseover="changeImage('images/image.jpeg')">
                     <h3>Outdoor & Surface Cleaning</h3>
                     <ul>
                         <li>Tile Cleaning</li>
@@ -63,37 +62,7 @@
                     </ul>
                 </div>
             </div>
-        </section>
-
-        <!-- 3D Carousel Gallery Section -->
-        <section class="carousel-container">
-            <h2>Service Photos</h2>
-            <div class="carousel">
-                <figure>
-                    <img src="images/image10.jpeg" alt="Residential Cleaning" />
-                </figure>
-                <figure>
-                    <img src="images/image11.jpeg" alt="Office Cleaning" />
-                </figure>
-                <figure>
-                    <img src="images/image12.jpeg" alt="Commercial Cleaning" />
-                </figure>
-                <figure>
-                    <img src="images/image9.jpeg" alt="Post-Construction Cleaning" />
-                </figure>
-                <figure>
-                    <img src="images/image2.jpeg" alt="After Party Cleaning" />
-                </figure>
-                <figure>
-                    <img src="images/image3.jpeg" alt="Commercial Cleaning" />
-                </figure>
-                <figure>
-                    <img src="images/image7.jpeg" alt="Post-Construction Cleaning" />
-                </figure>
-                <figure>
-                    <img src="images/image8.jpeg" alt="After Party Cleaning" />
-                </figure>
-            </div>
+            <img id="service-image" src="" alt="Service Image">
         </section>
     </main>
 
@@ -107,5 +76,13 @@
             <a href="mailto:osodo6724@gmail.com">osodo6724@gmail.com</a>
         </p>
     </footer>
+
+    <script>
+        function changeImage(imageSrc) {
+            let imageElement = document.getElementById("service-image");
+            imageElement.src = imageSrc;
+            imageElement.style.display = "block";
+        }
+    </script>
 </body>
 </html>
