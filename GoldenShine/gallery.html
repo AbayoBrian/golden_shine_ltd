@@ -3,67 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery - Golden Shine</title>
+    <title>Golden Shine Limited - Service Gallery</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 123, 255, 0.8);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
+        }
+
+        .gallery-filters {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .filter-button {
+            background: #007BFF;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .filter-button:hover {
+            background: #0056b3;
+        }
+    </style>
 </head>
 <body>
-
-    <!-- Header Section -->
     <header>
-        <!-- Company Logo -->
         <img src="images/logo.png" alt="Company Logo" class="logo" />
-        <h1>Golden Shine Ltd</h1>
-
-        <!-- Navigation Links -->
+        <h1>Service Gallery</h1>
         <nav>
             <a href="index.html">Home</a>
             <a href="services.html">Services</a>
             <a href="gallery.html">Gallery</a>
             <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
         </nav>
     </header>
-
-    <!-- Main Content -->
     <main>
-        <h2>Our Work</h2>
-        <div class="gallery-container">
-            <!-- Image Box -->
-            <div class="gallery-box">
-                <h3>Before Cleaning</h3>
-                <img src="images/before-cleaning.jpg" alt="Before Cleaning">
+        <section id="gallery">
+            <h2>Our Work Gallery</h2>
+            <div class="gallery-filters">
+                <button class="filter-button">All</button>
+                <button class="filter-button">Residential</button>
+                <button class="filter-button">Commercial</button>
+                <button class="filter-button">Specialized</button>
+                <button class="filter-button">Fumigation</button>
             </div>
-
-            <!-- Image Box -->
-            <div class="gallery-box">
-                <h3>After Cleaning</h3>
-                <img src="images/after-cleaning.jpg" alt="After Cleaning">
+            <div class="gallery-container">
+                <!-- Example gallery items - Replace image paths with your actual images -->
+                <div class="gallery-item">
+                    <img src="images/residential-1.jpg" alt="Residential Cleaning">
+                    <div class="gallery-caption">Home Deep Cleaning</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/commercial-1.jpg" alt="Commercial Cleaning">
+                    <div class="gallery-caption">Office Space Cleaning</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/specialized-1.jpg" alt="Specialized Cleaning">
+                    <div class="gallery-caption">Carpet Cleaning</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/fumigation-1.jpg" alt="Fumigation Services">
+                    <div class="gallery-caption">Pest Control</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/residential-2.jpg" alt="Kitchen Cleaning">
+                    <div class="gallery-caption">Kitchen Deep Clean</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/commercial-2.jpg" alt="Window Cleaning">
+                    <div class="gallery-caption">Window Cleaning</div>
+                </div>
             </div>
-
-            <!-- Video Box -->
-            <div class="gallery-box">
-                <h3>Cleaning in Action</h3>
-                <video controls>
-                    <source src="videos/cleaning-action.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-
-            <!-- Video Box -->
-            <div class="gallery-box">
-                <h3>Fumigation Process</h3>
-                <video controls>
-                    <source src="videos/fumigation.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </div>
+        </section>
     </main>
-
-    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2025 Golden Shine Ltd. All rights reserved.</p>
+        <p>&copy; 2024 Cleaning Services. All rights reserved.</p>
+        <p class="contact-info">
+            <img src="images/phone-icon.png" alt="Phone" class="footer-icon" />
+            <span>(+254) 718-292-217/702-115-328</span>
+            &nbsp;&nbsp;
+            <img src="images/email-icon.png" alt="Email" class="footer-icon" />
+            <a href="mailto:osodo6724@gmail.com">osodo6724@gmail.com</a>
+        </p>
     </footer>
-
 </body>
 </html>
