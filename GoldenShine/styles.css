@@ -1,15 +1,26 @@
+:root {
+  --primary-black: #000000;
+  --primary-gold: #D4AF37;
+  --accent-white: #FFFFFF;
+  --accent-yellow: #FFD700;
+  --accent-blue: #1E90FF;
+  --accent-green: #32CD32;
+  --accent-red: #FF4500;
+}
+
 /* Basic Reset and Styling */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: var(--primary-black);
+  color: var(--accent-white);
   text-align: center;
 }
 
 header {
-  background: #007BFF;
-  color: white;
+  background: var(--primary-gold);
+  color: var(--primary-black);
   padding: 10px 20px;
   text-align: center;
 }
@@ -20,13 +31,14 @@ nav {
 
 nav a {
   margin: 0 15px;
-  color: white;
+  color: var(--primary-black);
   text-decoration: none;
   transition: color 0.3s ease;
+  font-weight: bold;
 }
 
 nav a:hover {
-  color: #ffcc00;
+  color: var(--accent-white);
 }
 
 main {
@@ -36,16 +48,19 @@ main {
 section {
   padding: 20px;
   margin: 10px 0;
-  background: white;
+  background: var(--accent-white);
+  color: var(--primary-black);
   border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Footer */
 footer {
   text-align: center;
   padding: 10px 0;
-  background: #007BFF;
-  color: white;
+  background: var(--primary-black);
+  color: var(--primary-gold);
+  border-top: 2px solid var(--primary-gold);
 }
 
 /* Logo Styling */
@@ -68,7 +83,8 @@ footer {
   width: 300px;
   height: 200px;
   padding: 20px;
-  background: white;
+  background: var(--accent-white);
+  color: var(--primary-black);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
@@ -76,17 +92,21 @@ footer {
   overflow: hidden;
   transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
   cursor: pointer;
+  border-bottom: 3px solid var(--primary-gold);
 }
 
 .service-box:hover {
-  background: #f0f0f0;
+  background: var(--accent-yellow);
+  color: var(--primary-black);
   transform: scale(1.05);
+  border-bottom-color: var(--accent-red);
 }
 
 /* Service Titles */
 .service-box h3 {
   font-size: 18px;
   margin-bottom: 10px;
+  color: var(--primary-black);
 }
 
 /* Service List */
@@ -105,7 +125,8 @@ footer {
 .contact-container {
   max-width: 600px;
   margin: auto;
-  background: white;
+  background: var(--accent-white);
+  color: var(--primary-black);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -116,6 +137,7 @@ footer {
   font-weight: bold;
   display: block;
   margin-top: 10px;
+  color: var(--primary-black);
 }
 
 .contact-container input,
@@ -124,28 +146,41 @@ footer {
   padding: 10px;
   margin-top: 5px;
   border-radius: 5px;
-  border: 1px solid #ccc;
+  border: 2px solid var(--primary-gold);
+  background: var(--accent-white);
+  color: var(--primary-black);
+}
+
+.contact-container input:focus,
+.contact-container textarea:focus {
+  outline: none;
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 5px var(--accent-blue);
 }
 
 .contact-container button {
-  background: #007BFF;
-  color: white;
+  background: var(--primary-gold);
+  color: var(--primary-black);
   padding: 10px 15px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   margin-top: 10px;
+  font-weight: bold;
+  transition: all 0.3s ease;
 }
 
 .contact-container button:hover {
-  background: #0056b3;
+  background: var(--accent-yellow);
+  transform: scale(1.05);
 }
 
 /* About Page Styling */
 .about-container {
   max-width: 800px;
   margin: auto;
-  background: white;
+  background: var(--accent-white);
+  color: var(--primary-black);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -154,6 +189,7 @@ footer {
 
 .about-container h2 {
   text-align: center;
+  color: var(--primary-gold);
 }
 
 /* Portfolio Page */
@@ -167,12 +203,14 @@ footer {
 .portfolio-item {
   width: 300px;
   height: 200px;
-  background: white;
+  background: var(--accent-white);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   position: relative;
   text-align: center;
+  border: 2px solid var(--primary-gold);
+  transition: all 0.3s ease;
 }
 
 .portfolio-item img {
@@ -181,8 +219,59 @@ footer {
   object-fit: cover;
 }
 
+.portfolio-item:hover {
+  transform: scale(1.05);
+  border-color: var(--accent-blue);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
 .portfolio-item:hover img {
   opacity: 0.8;
+}
+
+/* Button Styles - Add these to any buttons */
+.button-primary {
+  background-color: var(--primary-gold);
+  color: var(--primary-black);
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button-primary:hover {
+  background-color: var(--accent-yellow);
+  transform: scale(1.05);
+}
+
+.button-secondary {
+  background-color: var(--accent-blue);
+  color: var(--accent-white);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button-secondary:hover {
+  background-color: var(--accent-green);
+  transform: scale(1.05);
+}
+
+/* Highlight text with gold */
+.highlight {
+  color: var(--primary-gold);
+  font-weight: bold;
+}
+
+/* Accent borders or dividers */
+.divider {
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary-gold), var(--accent-yellow));
+  margin: 20px 0;
 }
 
 /* Responsive Adjustments */
