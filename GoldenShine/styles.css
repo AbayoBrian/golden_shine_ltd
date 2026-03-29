@@ -51,7 +51,6 @@ section {
   background: var(--accent-white);
   color: var(--primary-black);
   border-radius: 5px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Footer */
@@ -99,7 +98,6 @@ footer {
   background: var(--accent-yellow);
   color: var(--primary-black);
   transform: scale(1.05);
-  border-bottom-color: var(--accent-red);
 }
 
 /* Service Titles */
@@ -146,7 +144,7 @@ footer {
   padding: 10px;
   margin-top: 5px;
   border-radius: 5px;
-  border: 2px solid var(--primary-gold);
+  border: 1px solid var(--primary-gold);
   background: var(--accent-white);
   color: var(--primary-black);
 }
@@ -155,7 +153,6 @@ footer {
 .contact-container textarea:focus {
   outline: none;
   border-color: var(--accent-blue);
-  box-shadow: 0 0 5px var(--accent-blue);
 }
 
 .contact-container button {
@@ -172,7 +169,6 @@ footer {
 
 .contact-container button:hover {
   background: var(--accent-yellow);
-  transform: scale(1.05);
 }
 
 /* About Page Styling */
@@ -189,7 +185,7 @@ footer {
 
 .about-container h2 {
   text-align: center;
-  color: var(--primary-gold);
+  color: var(--primary-black);
 }
 
 /* Portfolio Page */
@@ -222,56 +218,10 @@ footer {
 .portfolio-item:hover {
   transform: scale(1.05);
   border-color: var(--accent-blue);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .portfolio-item:hover img {
   opacity: 0.8;
-}
-
-/* Button Styles - Add these to any buttons */
-.button-primary {
-  background-color: var(--primary-gold);
-  color: var(--primary-black);
-  padding: 12px 24px;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.button-primary:hover {
-  background-color: var(--accent-yellow);
-  transform: scale(1.05);
-}
-
-.button-secondary {
-  background-color: var(--accent-blue);
-  color: var(--accent-white);
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.button-secondary:hover {
-  background-color: var(--accent-green);
-  transform: scale(1.05);
-}
-
-/* Highlight text with gold */
-.highlight {
-  color: var(--primary-gold);
-  font-weight: bold;
-}
-
-/* Accent borders or dividers */
-.divider {
-  height: 2px;
-  background: linear-gradient(90deg, var(--primary-gold), var(--accent-yellow));
-  margin: 20px 0;
 }
 
 /* Responsive Adjustments */
